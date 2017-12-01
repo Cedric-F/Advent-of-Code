@@ -3,16 +3,14 @@
 function add(nums){ /* Numbers list parameter */
 	let sum = 0; /* Initialize the sum */
 	let arr = Array.from(nums.toString()).map(Number); /* Puts each nums element in a new array as a Number */
-	const length = arr.length-1
+	const length = arr.length-1;
 	for (let i = 0; i < arr.length; i++) { /* While i < length of the array | iterate*/
 		if (arr[i] === arr[i+1]) { /* Check is the current number of the array matches the next one */
-			let tempSum = arr[i];
-			sum += tempSum; /* Add the sum of those 2 numbers to the total sum */
+			sum += arr[i]; /* Add the sum of those 2 numbers to the total sum */
         }
     }
     if (arr[0] === arr[length]) { /* When first and last figures are the same */
-    	let tempSum = arr[0];
-    	sum += tempSum
+    	sum += arr[0];
     }
 	return sum;
 }
