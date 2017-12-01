@@ -2,7 +2,7 @@
 
 function add(nums){ /* Numbers list parameter */
 	let sum = 0; /* Initialize the sum */
-	let arr = Array.from(nums.toString()).map(Number); /* Puts each nums element in a new array as a Number */
+	let arr = Array.from(nums).map(Number); /* Puts each nums element in a new array as a Number */
 	const length = arr.length-1;
 	for (let i = 0; i < arr.length; i++) { /* While i < length of the array | iterate*/
 		if (arr[i] === arr[i+1]) { /* Check is the current number of the array matches the next one */
