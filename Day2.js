@@ -1,10 +1,10 @@
 /* Part One */
 
-function checksum(input){
-	let sub = 0;
-	for (let i = 0; i < input.length; i++) {
+function checksum(input){ // Given array
+	let sub = 0; // final result
+	for (let i = 0; i < input.length; i++) { // Navigate through each row of the array
 		let row = input[i];
-		sub += Math.max.apply(null, row) - Math.min.apply(null, row);
+		sub += Math.max.apply(null, row) - Math.min.apply(null, row); // Add the result of (Max-Min) to the total
 	}
 	return sub;
 }
