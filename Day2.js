@@ -8,6 +8,26 @@ function checksum(input){ // Given array
 	}
 	return sub;
 }
+
+/* Part Two */
+
+function checksum(input){ // Given array
+	let sub = 0; // final result
+	for (let i = 0; i < input.length; i++) { // Navigate through each row of the array
+		let row = input[i];
+		for (let j = 0; j < input[i].length; j++) { // Navigate through each element of the row
+			let element = row[j];
+			for (let k = 0; k < input[i].length; k++) {
+				if (element % row[k] === 0 && element != row[k]){
+					sub += (element / row[k]);
+				}
+			}
+		}
+	}
+	return sub;
+}
+
+
 console.log(checksum([
 [3458,3471,163,1299,170,4200,2425,167,3636,4001,4162,115,2859,130,4075,4269],
 [2777,2712,120,2569,2530,3035,1818,32,491,872,113,92,2526,477,138,1360],
